@@ -1,0 +1,47 @@
+{
+  "name": "rare",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "https://github.com/rkamysz/rare",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "author": "Radoslaw Kamysz <radoslaw.kamysz@gmail.com>",
+  "scripts": {
+    "test:unit": "jest --config=jest.config.unit.json",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && tsc -b",
+    "start": "node build/index.js",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "format-check": "prettier --check \"src/\"",
+    "format": "prettier --write \"src/\""
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/graphql": "^14.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^27.4.5",
+    "prettier": "^2.7.1",
+    "ts-jest": "^27.1.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@soapjs/soap": "^0.2.2",
+    "@soapjs/soap-node-mongo": "^0.1.1",
+    "csv-parser": "^3.0.0",
+    "express": "^4.19.2",
+    "graphql": "^16.8.1",
+    "graphql-tools": "^9.0.1",
+    "inversify": "^6.0.2",
+    "mongodb": "^6.6.2",
+    "reflect-metadata": "^0.2.2"
+  }
+}
